@@ -26,8 +26,6 @@ def picker(sign, table):
 
 def checker(table):
     '''
-    !!!UNFINISHED!!!
-
     function takes a tic tac toe table as an argument and checks for winning combinations
     '''
     for i in range(3):          #a loop to check horizontal winning combinations
