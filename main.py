@@ -66,6 +66,9 @@ def checker(table):
         display_table(table)
         return True
 
+    if "." not in table:
+        return False
+
 def mainloop():
     '''main function of the tic tac toe game'''
     table = [".",".",".",".",".",".",".",".","."]   #list representation of tic tac toe table
@@ -92,13 +95,21 @@ def mainloop():
             print("It's " + second + "'s move\n")
             picker(second, table)
             move += 1
+            print(checker(table))
             if checker(table) == True:
                 win = True
+            elif checker(table) == False:
+                print('Remis!')
+                win = True
+
         else:
             print("It's " + first + "'s move\n")
             picker(first, table)
             move += 1
             if checker(table) == True:
+                win = True
+            elif checker(table) == False:
+                print('Remis!')
                 win = True
 
 mainloop()
